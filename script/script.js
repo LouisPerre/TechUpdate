@@ -18,7 +18,7 @@ function pageLoaded() {
 //début condition affichage cartes
 
 
-if (window.location.pathname == "/TechUpdate/index.html") {
+if (window.location.pathname == "/TechUpdate/index.html" || window.location.pathname == "/TechUpdate/") {
     function updateDom(data) {
         console.log(data)
         home.innerHTML = data.eleves
