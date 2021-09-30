@@ -9,29 +9,71 @@ const Boxarr = [];
 
 function pageLoaded() {
     fetch(base_url)
-    .then(res=>res.json())
-    .then(updateDom)
-    .catch(err=>console.warn(err.message));
+        .then(res => res.json())
+        .then(updateDom)
+        .catch(err => console.warn(err.message));
 
-    
+
 }
+//début condition affichage cartes
 
-function updateDom(data) {
-    console.log(data)
-    home.innerHTML = data.eleves
-    .map(anime => {
-        let link = ''
-        if (anime.github != '') {
-            let link = '<a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>'
-        } 
-        return  `
+
+if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/index.html") {
+    function updateDom(data) {
+        console.log(data)
+        home.innerHTML = data.eleves
+            .map(anime => {
+                let link = ''
+                if (anime.github != '') {
+                    let link = '<a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>'
+                } 
+                return `
+                <div class="row">
+                    <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                        <img src="${anime.photo}">
+                            ${link} 
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">${anime.nom}</span>
+                        <p>Rang du jour : ${anime.prenom}</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>`;
+            }).join("");
+
+
+        for (let i = 0; i < cardMichel.length; i++) {
+            Boxarr.push(cardMichel[i]);
+        }
+
+        if (localStorage.getItem('dark') == 'true') {
+            r.style.setProperty('--bg-body', '#101014');
+            Boxarr.forEach(card => {
+                card.style.backgroundColor = "var(--bg-primary)"
+            });
+            b.style.color = 'white';
+            home.classList.add("dark");
+        }
+    };
+
+
+
+} else if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/direction.html") {
+    function updateDom(data) {
+        console.log(data)
+        home.innerHTML = data.direction
+            .map(anime => {
+                return `
         <div class="row">
             <div class="col s12 m4">
               <div class="card">
                 <div class="card-image">
                   <img src="${anime.photo}">
-                       ${link} 
-                  </div>
+                  <a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+                </div>
                 <div class="card-content">
                     <span class="card-title">${anime.nom}</span>
                   <p>Rang du jour : ${anime.prenom}</p>
@@ -40,31 +82,72 @@ function updateDom(data) {
             </div>
           </div>
         `;
-    }).join("");
+            }).join("");
 
 
-    for (let i = 0; i < cardMichel.length; i++) {
-        Boxarr.push(cardMichel[i]);
-    }
+        for (let i = 0; i < cardMichel.length; i++) {
+            Boxarr.push(cardMichel[i]);
+        }
 
-    if (localStorage.getItem('dark') == 'true') {
-        r.style.setProperty('--bg-body', '#101014');
+        if (localStorage.getItem('dark') == 'true') {
+            r.style.setProperty('--bg-body', '#101014');
             Boxarr.forEach(card => {
                 card.style.backgroundColor = "var(--bg-primary)"
             });
             b.style.color = 'white';
             home.classList.add("dark");
-    }
+        }
+    };
+    console.log('direction')
+} else if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/professeurs.html") {
+    function updateDom(data) {
+        console.log(data)
+        home.innerHTML = data.prof
+            .map(anime => {
+                return `
+        <div class="row">
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="${anime.photo}">
+                  <a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">${anime.nom}</span>
+                  <p>Rang du jour : ${anime.prenom}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+            }).join("");
+
+
+        for (let i = 0; i < cardMichel.length; i++) {
+            Boxarr.push(cardMichel[i]);
+        }
+
+        if (localStorage.getItem('dark') == 'true') {
+            r.style.setProperty('--bg-body', '#101014');
+            Boxarr.forEach(card => {
+                card.style.backgroundColor = "var(--bg-primary)"
+            });
+            b.style.color = 'white';
+            home.classList.add("dark");
+        }
+    };
+    console.log('prof')
 }
 
+//fin condition affichage cartes
 
 window.addEventListener("load", pageLoaded);
 
 
 
-changeColor.addEventListener("click", function() {
-    
-    if (!home.classList.contains('dark')){
+changeColor.addEventListener("click", function () {
+
+    if (!home.classList.contains('dark')) {
         localStorage.setItem('dark', true)
         r.style.setProperty('--bg-body', '#101014');
         Boxarr.forEach(card => {
@@ -81,5 +164,5 @@ changeColor.addEventListener("click", function() {
         b.style.color = 'black';
         home.classList.remove("dark");
     }
-    
+
 })
