@@ -1,4 +1,4 @@
-const base_url = "script/iim.json";
+const base_url = "https://louisperre.github.io/TechUpdate/script/iim.json";
 const home = document.querySelector(".card_container");
 const changeColor = document.querySelector(".change");
 const r = document.querySelector(':root');
@@ -11,7 +11,7 @@ function pageLoaded() {
     fetch(base_url)
     .then(res=>res.json())
     .then(updateDom)
-    //.catch(err=>console.warn(err.message));
+    .catch(err=>console.warn(err.message));
 
     
 }
