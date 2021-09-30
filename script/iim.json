@@ -26,7 +26,7 @@
         "prenom": "Hassina",
         "github": "",
         "linkedin": "https://www.linkedin.com/in/hassina-ayachi-2468991ab/",
-        "photo": "/img/eleves/user.png"
+        "photo": "img/eleves/user.png"
         },
         {
         "nom": "BALLY",
@@ -40,35 +40,35 @@
         "prenom": "Nicolas",
         "github": "https://github.com/Nicoalz",
         "linkedin": "https://www.linkedin.com/in/nicolas-bordeaux-720601207/",
-        "photo": "/img/eleves/user.png"
+        "photo": "img/eleves/user.png"
         },
         {
         "nom": "BRIOLON",
         "prenom": "Augustin",
         "github": "https://github.com/AugustinBriolon",
         "linkedin": "https://www.linkedin.com/in/augustin-briolon-16831a1bb/",
-        "photo": "/img/eleves/user.png"
+        "photo": "img/eleves/user.png"
         },
         {
         "nom": "BRUNET",
         "prenom": "Manuel",
         "github": "",
         "linkedin": "https://www.linkedin.com/in/manuelbrunet/",
-        "photo": "/img/eleves/user.png"
+        "photo": "img/eleves/user.png"
         },
         {
         "nom": "CHARLES",
         "prenom": "Alexandre",
         "github": "https://github.com/seinokoula",
         "linkedin": "",
-        "photo": "/img/eleves/user.png"
+        "photo": "img/eleves/user.png"
         },
         {
         "nom": "CHU",
         "prenom": "Louis",
         "github": "",
         "linkedin": "https://www.linkedin.com/in/louis-chu-2061791a2/",
-        "photo": "/img/eleves/user.png"
+        "photo": "img/eleves/user.png"
         }
       ],
       "prof": [
@@ -77,21 +77,21 @@
         "prenom": "Alexis",
         "github": "https://github.com/AlexisSensei",
         "linkedin": "https://www.linkedin.com/in/alexisbougy/",
-        "photo": "/img/prof/alexisB.jpg"
+        "photo": "img/prof/alexisB.jpg"
         },
         {
         "nom": "Pierre",
         "prenom": "Grimaud",
         "github": "https://github.com/pgrimaud",
         "linkedin": "https://www.linkedin.com/in/pgrimaud/",
-        "photo": "/img/prof/pg.jpg"
+        "photo": "img/prof/pg.jpg"
         },
         {
         "nom": "RAUBER",
         "prenom": "Nicolas",
         "github": "",
         "linkedin": "https://www.linkedin.com/in/rauber/",
-        "photo": "/img/prof/nico_rauber.jpg"
+        "photo": "img/prof/nico_rauber.jpg"
         }
       ],
       "direction": [
@@ -100,14 +100,14 @@
         "prenom": "Karine",
         "github": "",
         "linkedin": "https://www.linkedin.com/in/karine-rachedi-mousdik-58710b10a/",
-        "photo": "/img/direction/karine_mousdkik.jpg"
+        "photo": "img/direction/karine_mousdkik.jpg"
         },
         {
         "nom": "PETER",
         "prenom": "Emmanuel",
         "github": "",
         "linkedin": "https://www.linkedin.com/in/emmanuel-peter-b9227727/",
-        "photo": "/img/direction/peter_emmanuel.jpg"
+        "photo": "img/direction/peter_emmanuel.jpg"
         }
       ]
   }
