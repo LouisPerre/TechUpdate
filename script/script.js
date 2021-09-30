@@ -18,15 +18,16 @@ function pageLoaded() {
 //début condition affichage cartes
 
 
-if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/index.html") {
+if (window.location.pathname == "/TechUpdate/index.html") {
     function updateDom(data) {
         console.log(data)
         home.innerHTML = data.eleves
             .map(anime => {
-                let link = ''
+                var link = ''
                 if (anime.github != '') {
-                    let link = '<a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>'
+                    link = '<a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>'
                 } 
+                console.log(anime.github)
                 return `
                 <div class="row">
                     <div class="col s12 m4">
@@ -61,7 +62,7 @@ if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/index.htm
 
 
 
-} else if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/direction.html") {
+} else if (window.location.pathname == "/TechUpdate/direction.html") {
     function updateDom(data) {
         console.log(data)
         home.innerHTML = data.direction
@@ -99,7 +100,7 @@ if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/index.htm
         }
     };
     console.log('direction')
-} else if (window.location.pathname == "/C:/laragon/www/TechUpdate/TechUpdate/professeurs.html") {
+} else if (window.location.pathname == "/TechUpdate/professeurs.html") {
     function updateDom(data) {
         console.log(data)
         home.innerHTML = data.prof
