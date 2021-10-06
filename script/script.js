@@ -25,9 +25,9 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
             .map(user => {
                 var link = ''
                 if (user.github != '') {
-                    link = '<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>'
+                    link = `<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>`
                 } else {
-                    link = '<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>'
+                    link = `<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>`
                 }
                 return `
                 <div class="row">
@@ -70,9 +70,9 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
             .map(user => {
                 var link = ''
                 if (user.github != '') {
-                    link = '<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>'
+                    link = `<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>`
                 } else {
-                    link = '<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>'
+                    link = `<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>`
                 }
                 return `
                 <div class="row">
@@ -113,9 +113,9 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
             .map(user => {
                 var link = ''
                 if (user.github != '') {
-                    link = '<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>'
+                    link = `<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>`
                 } else {
-                    link = '<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>'
+                    link = `<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>`
                 }
                 return `
                 <div class="row">
