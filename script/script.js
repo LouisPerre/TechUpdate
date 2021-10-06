@@ -25,7 +25,7 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
             .map(user => {
                 var link = ''
                 if (user.github != '') {
-                    link = '<a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons"><img src="https://img.shields.io/badge/%20-E15241?style=for-the-badge&logo=GIT&logoColor=white" alt="Logo Github"</img></i></a>'
+                    link = '<a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><img src="https://img.shields.io/badge/%20-E15241?style=for-the-badge&logo=GIT&logoColor=white" alt="Logo Github"</img></a>'
                 } 
                 console.log(user.github)
                 return `
