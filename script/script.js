@@ -25,11 +25,10 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
             .map(user => {
                 var link = ''
                 if (user.github != '') {
-                    link = '<a href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>'
+                    link = '<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>'
                 } else {
-                    link = '<a href="${anime.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>'
+                    link = '<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>'
                 }
-                console.log(user.github)
                 return `
                 <div class="row">
                     <div class="col s12 m4">
@@ -68,23 +67,28 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
     function updateDom(data) {
         console.log(data)
         home.innerHTML = data.direction
-            .map(anime => {
+            .map(user => {
+                var link = ''
+                if (user.github != '') {
+                    link = '<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>'
+                } else {
+                    link = '<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>'
+                }
                 return `
-        <div class="row">
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-image">
-                  <img src="${anime.photo}">
-                  <a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
-                </div>
-                <div class="card-content">
-                    <span class="card-title">${anime.nom}</span>
-                  <p>Rang du jour : ${anime.prenom}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
+                <div class="row">
+                    <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                        <img src="${user.photo}">
+                            ${link} 
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">${user.nom}</span>
+                        <p>${user.prenom}</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>`;
             }).join("");
 
 
@@ -106,23 +110,28 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
     function updateDom(data) {
         console.log(data)
         home.innerHTML = data.prof
-            .map(anime => {
+            .map(user => {
+                var link = ''
+                if (user.github != '') {
+                    link = '<a href="${user.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-github"></i></a>'
+                } else {
+                    link = '<a href="${user.linkedin}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="fab fa-linkedin"></i></a>'
+                }
                 return `
-        <div class="row">
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-image">
-                  <img src="${anime.photo}">
-                  <a id="${anime.mal_id}" href="${anime.github}" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
-                </div>
-                <div class="card-content">
-                    <span class="card-title">${anime.nom}</span>
-                  <p>Rang du jour : ${anime.prenom}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
+                <div class="row">
+                    <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                        <img src="${user.photo}">
+                            ${link} 
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">${user.nom}</span>
+                        <p>${user.prenom}</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>`;
             }).join("");
 
 
