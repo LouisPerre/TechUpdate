@@ -141,7 +141,7 @@ nav ul a {
     height: auto;
 }
 
-input {
+body input {
     display: flex;
     justify-content: center;
     height: auto;
