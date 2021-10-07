@@ -147,7 +147,7 @@ body .formInput input.inputForm {
     height: auto;
     width: auto;
     border-radius: 7px;
-    margin: 2%;
+    margin: 2% 0;
     outline: none;
     border: 2px solid var(--text-secondary);
     padding: 1%;
@@ -201,6 +201,18 @@ body .formInput input.inputForm {
     text-shadow: 1px 1px #fff;
     font-weight: 700;
     font-size: 10pt;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    width: 48vw;
+    height: 50vh;
+}
+
+.modifMain {
+    display: flex;
+    justify-content: center;
 }
 
 
