@@ -156,7 +156,7 @@ body .formInput input.inputForm {
 }
 
 .custom-file-input {
-    color: transparent;
+    color: transparent !important;
 }
 
 .custom-file-input::before {
