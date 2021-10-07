@@ -155,6 +155,10 @@ body .formInput input.inputForm {
     color: var(--text-secondary)
 }
 
+.custom-file-input {
+    color: transparent;
+}
+
 .custom-file-input::before {
     content: 'Selectionne une photo';
     color: black;
