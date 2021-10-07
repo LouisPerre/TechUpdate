@@ -146,10 +146,9 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
                 Boxarr.forEach(card => {
                     card.style.backgroundColor = "var(--bg-primary)"
                 });
-                home.classList.add("dark");
-                home2.classList.add("dark")
+                
             }
-            
+            home2.classList.add("dark")
             b.style.color = 'white';
         }
     };
@@ -163,25 +162,23 @@ window.addEventListener("load", pageLoaded);
 
 changeColor.addEventListener("click", function () {
 
-    if (!home.classList.contains('dark') || !home2.classList.contains('dark')) {
+    if (!home2.classList.contains('dark')) {
         localStorage.setItem('dark', true)
         r.style.setProperty('--bg-body', '#101014');
         if (Boxarr){
             Boxarr.forEach(card => {
                 card.style.backgroundColor = "var(--bg-primary)"
             });
-            home.classList.add("dark");
         }
         home2.classList.add("dark")
         b.style.color = 'white';
-    } else if (home.classList.contains('dark') || home2.classList.contains('dark')) {
+    } else if (home2.classList.contains('dark')) {
         localStorage.setItem('dark', false)
         r.style.setProperty('--bg-body', '#fff')
         if (Boxarr){
             Boxarr.forEach(card => {
                 card.style.backgroundColor = "#fff"
             });
-            home.classList.remove("dark");
         }
         home2.classList.remove("dark")
         
