@@ -141,6 +141,20 @@ nav ul a {
     height: auto;
 }
 
+input {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    border-radius: 7px;
+    margin: 2%;
+    outline: none;
+    border: 2px solid var(--text-secondary);
+    padding: 1%;
+    background: none;
+    color: var(--text-secondary)
+}
+
 
 @media screen and (max-width: 600px) {
     .navbar {
