@@ -178,7 +178,7 @@ nav ul a {
     background-color: #3e3e50;
 }
 
-<<<<<<< HEAD .secondPartContainer {
+.secondPartContainer {
     z-index: 2;
     width: 120%;
     height: 1000px;
@@ -223,22 +223,6 @@ nav ul a {
     text-align: center;
 }
 
-@media screen and (min-width: 600px) {
-    .navbar {
-        top: 0;
-        width: 5rem;
-        height: 100vh;
-    }
-
-    .navbar:hover {
-        width: 16rem;
-    }
-
-    .navbar:hover .link-text {
-        display: inline;
-    }
-
-}
 
 body .formInput input.inputForm {
     display: flex;
@@ -321,6 +305,23 @@ body .formInput input.inputForm {
     justify-content: center;
     height: 100vh;
     align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
 }
 
 
