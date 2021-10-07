@@ -168,7 +168,7 @@ window.addEventListener("load", pageLoaded);
 
 changeColor.addEventListener("click", function () {
 
-    if (!window.location.pathname == "/TechUpdate/modif.html"){
+    if (window.location.pathname != "/TechUpdate/modif.html"){
         if (!home2.classList.contains('dark')) {
             localStorage.setItem('dark', true)
             r.style.setProperty('--bg-body', '#101014');
