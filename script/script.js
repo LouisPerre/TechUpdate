@@ -152,6 +152,18 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
             b.style.color = 'white';
         }
     };
+} else if (window.location.pathname == "/TechUpdate/modif.html"){
+    if (localStorage.getItem('dark') == 'true') {
+        r.style.setProperty('--bg-body', '#101014');
+        if (Boxarr) {
+            Boxarr.forEach(card => {
+                card.style.backgroundColor = "var(--bg-primary)"
+            });
+            
+        }
+        home2.classList.add("dark")
+        b.style.color = 'white';
+    }
 }
 
 //fin condition affichage cartes
