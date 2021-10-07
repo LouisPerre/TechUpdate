@@ -139,11 +139,10 @@ nav ul a {
 
 .card_container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: auto;
     width: 100%;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .textContainer {
