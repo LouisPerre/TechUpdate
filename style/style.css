@@ -144,7 +144,7 @@ nav ul a {
 body .formInput input.inputForm {
     display: flex;
     justify-content: center;
-    height: auto;
+    height: 100%;
     width: 100%;
     border-radius: 7px;
     margin: 2% 0;
@@ -207,7 +207,9 @@ body .formInput input.inputForm {
     display: flex;
     flex-direction: column;
     width: 48vw;
-    height: 50vh;
+    height: 75vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .modifMain {
