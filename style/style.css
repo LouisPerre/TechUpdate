@@ -137,6 +137,15 @@ nav ul a {
     height: auto;
 }
 
+.card_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
 .textContainer {
     display: flex;
     justify-content: center;
