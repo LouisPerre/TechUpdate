@@ -19,6 +19,7 @@
 body {
     color: black;
     background-color: var(--bg-body);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -115,22 +116,17 @@ nav ul a {
     letter-spacing: 0.3ch;
     width: 100%;
 }
+
 .logo svg {
     transform: rotate(0deg);
-    transition:  transform var(--transition-speed);
+    transition: transform var(--transition-speed);
 }
 
 .navbar:hover .logo svg {
     transform: rotate(-180deg);
 }
 
-.card_container {
-    display: flex;
-    height: auto;
-    width: 100%;
-    overflow: hidden;
-    flex-wrap: wrap;
-}
+
 
 .row .col.m4 {
     width: 100% !important;
@@ -141,6 +137,108 @@ nav ul a {
     height: auto;
 }
 
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.header {
+    z-index: 4;
+    width: 120%;
+    height: 1000px;
+    transform: rotate(3deg) translateX(-100px) translateY(-170px);
+    position: absolute;
+    top: 0;
+    background-color: #23232e;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+    margin-top: 25vh;
+    color: whitesmoke;
+}
+
+.firstPartContainer {
+    z-index: 3;
+    width: 120%;
+    height: 1000px;
+    transform: rotate(-2deg) translateX(-100px) translateY(-250px);
+    position: absolute;
+    top: 1000px;
+    background-color: #3e3e50;
+}
+
+.secondPartContainer {
+    z-index: 2;
+    width: 120%;
+    height: 1000px;
+    transform: rotate(1deg) translateX(-100px) translateY(-250px);
+    position: absolute;
+    top: 1900px;
+    background-color: #4e4e65;
+}
+
+.thirdPartContainer {
+    z-index: 1;
+    width: 120%;
+    height: 1300px;
+    transform: rotate(-1deg) translateX(-100px) translateY(-250px);
+    position: absolute;
+    top: 2850px;
+    background-color: #5f5f7b;
+}
+
+.fourthPartContainer {
+    z-index: 0;
+    width: 120%;
+    height: 800px;
+    transform: rotate(0deg) translateX(-100px) translateY(-250px);
+    position: absolute;
+    top: 3850px;
+    background-color: #717193;
+}
+
+.devs {
+    z-index: 10;
+    margin-top: 4%;
+    width: 30vw;
+
+}
+
+.devs ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
+}
 
 @media screen and (max-width: 600px) {
     .navbar {
@@ -163,22 +261,76 @@ nav ul a {
 
     main {
         margin: 0;
-    }
-}
 
-@media screen and (min-width: 600px) {
-    .navbar {
+    }
+
+    .header {
+        height: 1000px;
+        width: 150%;
+        transform: rotate(3deg) translateX(50px) translateY(-150px);
+        position: absolute;
         top: 0;
-        width: 5rem;
-        height: 100vh;
+        background-color: #23232e;
     }
 
-    .navbar:hover {
-        width: 16rem;
+    .intro {
+        margin-top: 20vh;
+        margin-right: 159vw;
+        text-align: center;
     }
 
-    .navbar:hover .link-text {
-        display: inline;
+    .intro .h1 {
+        font-size: 25px;
     }
 
-}
+    .c1,
+    .c2,
+    .c2,
+    .c4,
+    .c5,
+    .c6,
+    .c7,
+    .c8,
+    .c9 {
+        margin-right: -500vw;
+        text-align: center;
+        flex-wrap: wrap;
+        width: 300px;
+        font-size: 18px;
+    }
+
+
+    .textContainer p1,
+    .textContainer p2,
+    .textContainer p3 {
+        font-size: 18px;
+        line-height: 29px;
+        width: 50vw
+    }
+
+    .firstPartContainer {
+        height: 1000px;
+        width: 150%;
+        transform: rotate(-2deg) translateX(50px) translateY(-220px);
+        top: 1000px;
+    }
+
+    .secondPartContainer {
+        height: 1000px;
+        width: 150%;
+        transform: rotate(1deg) translateX(50px) translateY(-220px);
+        top: 1900px;
+    }
+
+    .thirdPartContainer {
+        height: 1300px;
+        width: 150%;
+        transform: rotate(-1deg) translateX(50px) translateY(-250px);
+        top: 2850px;
+    }
+
+    .fourthPartContainer {
+        height: 800px;
+        width: 150%;
+        transform: rotate(0deg) translateX(50px) translateY(-250px);
+        top: 3850px;
