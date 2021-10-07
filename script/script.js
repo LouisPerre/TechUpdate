@@ -1,5 +1,6 @@
 const base_url = "https://louisperre.github.io/TechUpdate/script/iim.json";
 const home = document.querySelector(".card_container");
+const home2 = document.querySelector(".navbar")
 const changeColor = document.querySelector(".change");
 const r = document.querySelector(':root');
 const b = document.querySelector('body');
@@ -146,6 +147,7 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
                     card.style.backgroundColor = "var(--bg-primary)"
                 });
                 home.classList.add("dark");
+                home2.classList.add("dark")
             }
             
             b.style.color = 'white';
@@ -161,7 +163,7 @@ window.addEventListener("load", pageLoaded);
 
 changeColor.addEventListener("click", function () {
 
-    if (!home.classList.contains('dark')) {
+    if (!home.classList.contains('dark') || !home2.classList.contains('dark')) {
         localStorage.setItem('dark', true)
         r.style.setProperty('--bg-body', '#101014');
         if (Boxarr){
@@ -170,8 +172,9 @@ changeColor.addEventListener("click", function () {
             });
             home.classList.add("dark");
         }
+        home2.classList.add("dark")
         b.style.color = 'white';
-    } else if (home.classList.contains('dark')) {
+    } else if (home.classList.contains('dark') || home2.classList.contains('dark')) {
         localStorage.setItem('dark', false)
         r.style.setProperty('--bg-body', '#fff')
         if (Boxarr){
@@ -180,6 +183,7 @@ changeColor.addEventListener("click", function () {
             });
             home.classList.remove("dark");
         }
+        home2.classList.remove("dark")
         
         b.style.color = 'black';
     }
