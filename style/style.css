@@ -141,7 +141,7 @@ nav ul a {
     height: auto;
 }
 
-.formInput .inputForm {
+body .formInput input.inputForm {
     display: flex;
     justify-content: center;
     height: auto;
