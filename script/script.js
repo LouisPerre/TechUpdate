@@ -153,15 +153,9 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
         }
     };
 } else if (window.location.pathname == "/TechUpdate/modif.html"){
-    if (localStorage.getItem('dark') == 'true') {
+    if (home2.classList.contains('dark')) {
         r.style.setProperty('--bg-body', '#101014');
-        if (Boxarr) {
-            Boxarr.forEach(card => {
-                card.style.backgroundColor = "var(--bg-primary)"
-            });
-            
-        }
-        home2.classList.add("dark")
+        localStorage.setItem('dark', true)
         b.style.color = 'white';
     }
 }
@@ -174,27 +168,28 @@ window.addEventListener("load", pageLoaded);
 
 changeColor.addEventListener("click", function () {
 
-    if (!home2.classList.contains('dark')) {
-        localStorage.setItem('dark', true)
-        r.style.setProperty('--bg-body', '#101014');
-        if (Boxarr){
-            Boxarr.forEach(card => {
-                card.style.backgroundColor = "var(--bg-primary)"
-            });
+    if (!window.location.pathname == "/TechUpdate/modif.html"){
+        if (!home2.classList.contains('dark')) {
+            localStorage.setItem('dark', true)
+            r.style.setProperty('--bg-body', '#101014');
+            if (Boxarr){
+                Boxarr.forEach(card => {
+                    card.style.backgroundColor = "var(--bg-primary)"
+                });
+            }
+            home2.classList.add("dark")
+            b.style.color = 'white';
+        } else if (home2.classList.contains('dark')) {
+            localStorage.setItem('dark', false)
+            r.style.setProperty('--bg-body', '#fff')
+            if (Boxarr){
+                Boxarr.forEach(card => {
+                    card.style.backgroundColor = "#fff"
+                });
+            }
+            home2.classList.remove("dark")
+            
+            b.style.color = 'black';
         }
-        home2.classList.add("dark")
-        b.style.color = 'white';
-    } else if (home2.classList.contains('dark')) {
-        localStorage.setItem('dark', false)
-        r.style.setProperty('--bg-body', '#fff')
-        if (Boxarr){
-            Boxarr.forEach(card => {
-                card.style.backgroundColor = "#fff"
-            });
-        }
-        home2.classList.remove("dark")
-        
-        b.style.color = 'black';
     }
-
 })
