@@ -141,14 +141,16 @@ if (window.location.pathname == "/TechUpdate/index.html" || window.location.path
 
         if (localStorage.getItem('dark') == 'true') {
             r.style.setProperty('--bg-body', '#101014');
-            Boxarr.forEach(card => {
-                card.style.backgroundColor = "var(--bg-primary)"
-            });
+            if (Boxarr) {
+                Boxarr.forEach(card => {
+                    card.style.backgroundColor = "var(--bg-primary)"
+                });
+                home.classList.add("dark");
+            }
+            
             b.style.color = 'white';
-            home.classList.add("dark");
         }
     };
-    console.log('prof')
 }
 
 //fin condition affichage cartes
@@ -162,19 +164,24 @@ changeColor.addEventListener("click", function () {
     if (!home.classList.contains('dark')) {
         localStorage.setItem('dark', true)
         r.style.setProperty('--bg-body', '#101014');
-        Boxarr.forEach(card => {
-            card.style.backgroundColor = "var(--bg-primary)"
-        });
+        if (Boxarr){
+            Boxarr.forEach(card => {
+                card.style.backgroundColor = "var(--bg-primary)"
+            });
+            home.classList.add("dark");
+        }
         b.style.color = 'white';
-        home.classList.add("dark");
     } else if (home.classList.contains('dark')) {
         localStorage.setItem('dark', false)
-        r.style.setProperty('--bg-body', '#fff');
-        Boxarr.forEach(card => {
-            card.style.backgroundColor = "#fff"
-        });
+        r.style.setProperty('--bg-body', '#fff')
+        if (Boxarr){
+            Boxarr.forEach(card => {
+                card.style.backgroundColor = "#fff"
+            });
+            home.classList.remove("dark");
+        }
+        
         b.style.color = 'black';
-        home.classList.remove("dark");
     }
 
 })
